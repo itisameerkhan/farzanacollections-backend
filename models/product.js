@@ -5,6 +5,18 @@ const productModel = mongoose.Schema({
     type: String,
     required: true,
   },
+  imageURL2: {
+    type: String,
+    required: true,
+  },
+  imageURL3: {
+    type: String,
+    required: true,
+  },
+  imageURL4: {
+    type: String,
+    required: true,
+  },
   name: {
     type: String,
     required: true,
@@ -24,6 +36,10 @@ const productModel = mongoose.Schema({
   category: {
     type: String,
     required: true,
+  },
+  quantity: {
+    type: Number,
+    requird: true,
   },
 });
 

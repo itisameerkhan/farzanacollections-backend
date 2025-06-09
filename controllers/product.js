@@ -2,25 +2,44 @@ import { Product } from "../models/product.js";
 
 export const addProductController = async (req, res, next) => {
   try {
-    const { imageURL, name, price, description, type, category } = req.body;
+    const {
+      imageURL,
+      imageURL2,
+      imageURL3,
+      imageURL4,
+      name,
+      price,
+      description,
+      type,
+      quantity,
+      category,
+    } = req.body;
 
     if (
       imageURL === "" ||
+      imageURL2 === "" ||
+      imageURL3 === "" ||
+      imageURL4 === "" ||
       name === "" ||
       price === "" ||
       description === "" ||
       type === "" ||
-      category === ""
+      category === "" ||
+      quantity === ""
     ) {
       throw new Error("All fields are required");
     }
 
     const product = new Product({
       imageURL,
+      imageURL2,
+      imageURL3,
+      imageURL4,
       name,
       price,
       description,
       type,
+      quantity,
       category,
     });
 
